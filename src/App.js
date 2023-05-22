@@ -11,8 +11,10 @@ const App = () => {
         <CartProvider>
           <Router>
             <Routes>
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Route path="/" element={<HomePage/>}/>
             <Route path="/cart" element={<ShoppingCartPage/>}/>
+            </BrowserRouter>
             </Routes>
           </Router>
         </CartProvider>
