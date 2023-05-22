@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './HomePage';
 import ShoppingCartPage from './ShoppingCartPage';
 import { CartProvider } from './CartContext';
@@ -11,7 +11,7 @@ const App = () => {
         <CartProvider>
           <Router>
             <Routes>
-            <Route exact path="/" element={<HomePage/>}/>
+            <Route path="/" element={<HomePage/>}/>
             <Route path="/cart" element={<ShoppingCartPage/>}/>
             </Routes>
           </Router>
