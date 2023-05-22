@@ -11,7 +11,7 @@ const App = () => {
         <CartProvider>
           <Router basename={process.env.PUBLIC_URL}>
             <Routes>
-            <Route path="/" element={<HomePage/>}/>
+            <Route exact path="/" element={<HomePage/>}/>
             <Route path="/cart" element={<ShoppingCartPage/>}/>
             </Routes>
           </Router>
