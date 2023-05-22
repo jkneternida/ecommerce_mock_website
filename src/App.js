@@ -9,12 +9,12 @@ const App = () => {
     return (
       <div>
         <CartProvider>
-          <Router basename={process.env.PUBLIC_URL}>
+          <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Routes>
             <Route exact path="/" element={<HomePage/>}/>
             <Route path="/cart" element={<ShoppingCartPage/>}/>
             </Routes>
-          </Router>
+          </BrowserRouter>
         </CartProvider>
         </div>
     );
