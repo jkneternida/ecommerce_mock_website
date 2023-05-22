@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { CartContext } from './CartContext';
 
 const ProductCard = ({ product }) => {
-    const { title, price, image } = product;
+    const { title, price, image, description } = product;
     const { dispatch } = useContext(CartContext);
     const [showDetails, setShowDetails ] = useState(false);
 
@@ -25,20 +25,20 @@ const ProductCard = ({ product }) => {
                 {showDetails ? 'Hide Details' : 'Show Details'}
                 </button>
                 {showDetails && (
-                    <ProductDetails  title={title} price={price} image={image}/>
+                    <ProductDetails  title={title} price={price} image={image} description={description}/>
                 )}
         </div>
     );
 };
 
-    const ProductDetails = ({title, price, image}) => {
+    const ProductDetails = ({title, price, image, description}) => {
 
         return (
             <div>
-            <p>Timeless, Simple. Functional, Comfortable, Durable, Practical. 
-            Suitable both for everyday use and walks in the forest, and its simple functionality and durable material will make it a favorite for many years to come.
+            <p>
+                {description}
             </p>
-            <imge src={image} alt={title} style={{width: '200px'}}/>
+            <image src={image} alt={title} style={{width: '200px'}}/>
             </div>
         );
     };
