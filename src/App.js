@@ -4,6 +4,9 @@ import HomePage from './HomePage';
 import ShoppingCartPage from './ShoppingCartPage';
 import { CartProvider } from './CartContext';
 import './App.css';
+import ReactGA from 'react-ga4';
+
+ReactGA.initialize("G-ZDM9S38KX5");
 
 const App = () => {
     return (
